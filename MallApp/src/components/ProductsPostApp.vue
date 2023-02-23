@@ -9,8 +9,20 @@
           <img src="../assets/images/sweater_zara.webp" alt="" />
         </div>
       </div>
-      <div class="productsPost__box"></div>
-      <div class="productsPost__box"></div>
+      <div class="productsPost__box">
+        <h4>special offer</h4>
+        <h2>sweater - zara</h2>
+        <div class="productsPost__image">
+          <img src="../assets/images/sweater_zara.webp" alt="" />
+        </div>
+      </div>
+      <div class="productsPost__box">
+        <h4>special offer</h4>
+        <h2>sweater - zara</h2>
+        <div class="productsPost__image">
+          <img src="../assets/images/sweater_zara.webp" alt="" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,7 +44,7 @@
     padding-top: 40px;
   }
   &__box {
-    background: linear-gradient(to bottom, #6847bc 65%, #000 100%);
+    background: linear-gradient(to bottom, $purple 65%, #000 100%);
     border-radius: 4px;
     padding: 20px;
   }
@@ -45,6 +57,7 @@
     display: flex;
     justify-content: center;
     border-radius: 4px;
+    height: 242px;
   }
 }
 </style>

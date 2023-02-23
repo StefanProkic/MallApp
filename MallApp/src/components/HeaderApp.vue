@@ -30,7 +30,7 @@ header {
     }
 
     h1 {
-      color: #ffffff;
+      color: $white;
       font-size: 30px;
       font-weight: 600;
       text-transform: uppercase;

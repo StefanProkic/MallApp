@@ -1,5 +1,6 @@
-@import './base.css';
-
+@import '../assets/scss/style.scss';
+@import '../assets/scss/main.scss';
+@import '@/assets/scss/_colors.scss';
 
 
 

@@ -72,8 +72,8 @@ import FilterApp from "../components/FilterApp.vue";
   }
   &__activeMaps p {
     font-size: 13px;
-    color: #fff;
-    background-color: #781edc;
+    color: $white;
+    background-color: $purple;
     border-radius: 4px;
     padding: 8px 10px;
   }

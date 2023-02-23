@@ -44,16 +44,16 @@ export default {
 .filter {
   input {
     background-color: transparent;
-    border: 1px solid #fff; /* Adds a border to the input field */
+    border: 1px solid $white; /* Adds a border to the input field */
     padding: 8px 12px; /* Adds padding to the input field */
     font-size: 14px; /* Sets the font size of the input field */
     border-radius: 4px; /* Adds rounded corners to the input field */
-    color: #fff;
+    color: $white;
     margin-bottom: 10px;
 
     &:focus {
       outline: none; /* Removes the default focus style */
-      border-color: #781edc; /* Changes the border color when the input field is focused */
+      border-color: $purple; /* Changes the border color when the input field is focused */
     }
   }
   ul {
@@ -68,11 +68,11 @@ export default {
       padding-left: 10px;
 
       &:hover {
-        background-color: #781edc;
+        background-color: $purple;
         padding-left: 5px;
         transition: background-color 0.2s, padding 0.2s;
         span {
-          color: #fff;
+          color: $white;
         }
       }
     }
@@ -82,7 +82,7 @@ export default {
     }
 
     &::-webkit-scrollbar-track {
-      background: #fff;
+      background: $white;
     }
 
     &::-webkit-scrollbar-thumb {
