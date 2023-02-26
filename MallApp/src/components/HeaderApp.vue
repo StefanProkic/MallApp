@@ -28,13 +28,6 @@ header {
       width: 176px;
       height: 109px;
     }
-
-    h1 {
-      color: $white;
-      font-size: 30px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
   }
 }
 </style>

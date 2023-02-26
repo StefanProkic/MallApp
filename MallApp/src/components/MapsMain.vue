@@ -1,7 +1,7 @@
 <template>
   <div class="hero hero--desktop">
     <div class="hero__search">
-      <FilterApp />
+      <FilterMap />
     </div>
     <div class="hero__maps">
       <img
@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import FilterApp from "../components/FilterApp.vue";
+import FilterMap from "./FilterMap.vue";
 </script>
 
 <style lang="scss">

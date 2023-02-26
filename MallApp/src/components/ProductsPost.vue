@@ -29,7 +29,7 @@
 
 <script setup></script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .productsPost {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -44,7 +44,7 @@
     padding-top: 40px;
   }
   &__box {
-    background: linear-gradient(to bottom, $purple 65%, #000 100%);
+    background: $purpleGradient;
     border-radius: 4px;
     padding: 20px;
   }

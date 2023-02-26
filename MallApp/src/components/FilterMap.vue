@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .filter {
   input {
     background-color: transparent;
@@ -50,6 +50,7 @@ export default {
     border-radius: 4px; /* Adds rounded corners to the input field */
     color: $white;
     margin-bottom: 10px;
+    transition: all 0.3s ease-out;
 
     &:focus {
       outline: none; /* Removes the default focus style */
