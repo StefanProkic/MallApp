@@ -3,11 +3,13 @@
     <h3>Best offers</h3>
     <div class="productsPost__wrapper">
       <div class="productsPost__box">
-        <h4>special offer</h4>
-        <h2>sweater - zara</h2>
-        <div class="productsPost__image">
-          <img src="../assets/images/sweater_zara.webp" alt="" />
-        </div>
+        <a href="/single-store">
+          <h4>special offer</h4>
+          <h2>sweater - zara</h2>
+          <div class="productsPost__image">
+            <img src="../assets/images/sweater_zara.webp" alt="" />
+          </div>
+        </a>
       </div>
       <div class="productsPost__box">
         <h4>special offer</h4>
@@ -47,6 +49,10 @@
     background: $purpleGradient;
     border-radius: 4px;
     padding: 20px;
+
+    a {
+      text-decoration: none;
+    }
   }
   &__box h4,
   h2 {

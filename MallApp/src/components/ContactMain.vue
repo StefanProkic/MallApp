@@ -38,6 +38,7 @@
 
   &__wrapper {
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(3, 365px);
     grid-template-rows: 261px;
     gap: 22px;
