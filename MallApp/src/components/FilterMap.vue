@@ -46,7 +46,7 @@ export default {
     background-color: transparent;
     border: 1px solid $white; /* Adds a border to the input field */
     padding: 8px 12px; /* Adds padding to the input field */
-    font-size: 14px; /* Sets the font size of the input field */
+    font-size: 15px; /* Sets the font size of the input field */
     border-radius: 4px; /* Adds rounded corners to the input field */
     color: $white;
     margin-bottom: 10px;

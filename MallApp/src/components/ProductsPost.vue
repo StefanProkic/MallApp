@@ -3,24 +3,24 @@
     <h3>Best offers</h3>
     <div class="productsPost__wrapper">
       <div class="productsPost__box">
-        <a href="/single-store">
+        <RouterLink to="/single-store">
           <h4>special offer</h4>
-          <h2>sweater - zara</h2>
+          <h2>sweater - Nike</h2>
           <div class="productsPost__image">
             <img src="../assets/images/sweater_zara.webp" alt="" />
           </div>
-        </a>
+        </RouterLink>
       </div>
       <div class="productsPost__box">
         <h4>special offer</h4>
-        <h2>sweater - zara</h2>
+        <h2>sweater - nike</h2>
         <div class="productsPost__image">
           <img src="../assets/images/sweater_zara.webp" alt="" />
         </div>
       </div>
       <div class="productsPost__box">
         <h4>special offer</h4>
-        <h2>sweater - zara</h2>
+        <h2>sweater - nike</h2>
         <div class="productsPost__image">
           <img src="../assets/images/sweater_zara.webp" alt="" />
         </div>
@@ -33,6 +33,7 @@
 
 <style lang="scss" scoped>
 .productsPost {
+  display: inline-block;
   padding-top: 40px;
   padding-bottom: 40px;
   height: 100%;
@@ -60,10 +61,31 @@
   }
   &__image {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    display: inline-block;
     border-radius: 4px;
     height: 242px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* mobile responsive */
+@media (max-width: $mobile) {
+  .productsPost {
+    /* margin-top: 10%; */
+    margin-bottom: 10%;
+    padding: 0 2%;
+
+    &__wrapper {
+      grid-template-rows: repeat(3, 367px);
+      grid-template-columns: 320px;
+      justify-content: center;
+      gap: 3%;
+    }
   }
 }
 </style>

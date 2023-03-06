@@ -31,6 +31,7 @@
 
 <style lang="scss" scoped>
 .storePost {
+  display: inline-block;
   padding-top: 40px;
   padding-bottom: 40px;
   height: 100%;
@@ -54,10 +55,31 @@
   }
   &__image {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    display: inline-block;
     border-radius: 4px;
     height: 242px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* mobile responsive */
+@media (max-width: $mobile) {
+  .storePost {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 0 2%;
+
+    &__wrapper {
+      grid-template-rows: repeat(3, 367px);
+      grid-template-columns: 320px;
+      justify-content: center;
+      gap: 3%;
+    }
   }
 }
 </style>

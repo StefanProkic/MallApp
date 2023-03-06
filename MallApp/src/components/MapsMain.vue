@@ -1,5 +1,5 @@
 <template>
-  <div class="hero hero--desktop">
+  <div class="hero">
     <div class="hero__search">
       <FilterMap />
     </div>
@@ -9,7 +9,7 @@
         alt="image of first floor"
       />
     </div>
-    <div class="hero__selectMaps">
+    <div class="hero__selectFloors">
       <button><p>Basement</p></button>
       <button class="hero__activeMaps"><p>Ground floor</p></button>
       <button><p>First floor</p></button>
@@ -33,7 +33,7 @@ import FilterMap from "./FilterMap.vue";
   }
   p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: #888;
     font-weight: 600;
     cursor: pointer;
@@ -41,7 +41,7 @@ import FilterMap from "./FilterMap.vue";
   }
   span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     color: #888;
     font-weight: 600;
     cursor: pointer;
@@ -56,26 +56,61 @@ import FilterMap from "./FilterMap.vue";
   img {
     margin: 0 auto;
   }
-  &__selectMaps {
+  &__selectFloors {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: end;
   }
-  &__selectMaps button {
+  &__selectFloors button {
     padding: 4px 10px;
-    width: 134px;
+    width: 164px;
     border-radius: 4px;
     background-color: transparent;
     border: none;
     transition: transform 0.2s;
   }
   &__activeMaps p {
-    font-size: 13px;
+    font-size: 15px;
     color: $white;
     background-color: $purple;
     border-radius: 4px;
     padding: 8px 10px;
+  }
+}
+/* mobile responsive */
+@media (max-width: $mobile) {
+  header {
+    margin-bottom: 10%;
+  }
+  .hero {
+    flex-direction: column;
+    &__search {
+      justify-content: center;
+      margin-bottom: 10%;
+    }
+    img {
+      width: 100%;
+    }
+    p {
+      font-size: 13px;
+    }
+    span {
+      font-size: 14px;
+    }
+    &__selectFloors {
+      margin-top: 10%;
+      margin-bottom: 10%;
+      align-items: center;
+    }
+    &__selectFloors button {
+      width: 144px;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+    &__activeMaps p {
+      font-size: 14px;
+    }
   }
 }
 </style>

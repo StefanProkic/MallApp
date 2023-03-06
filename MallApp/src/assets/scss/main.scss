@@ -6,7 +6,7 @@
   }
   
   
-  
+
   body {
     
     background-image: url(@/assets/images/BG_body.webp);
@@ -27,8 +27,11 @@
     max-width: 1140px;
     margin: 0 auto;
   }
+
+
 p {
   font-family: "Rajdhani";
+  font-size: 16px;
 }
   h1 {
     color: #fff;
@@ -56,4 +59,23 @@ p {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+  }
+
+  /*mobile responsvie*/
+  @media (max-width: $mobile) {
+    main {
+      max-width: 430px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 23px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 14px;
+    }
   }

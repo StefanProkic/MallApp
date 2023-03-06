@@ -59,7 +59,7 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 80px;
-    font-size: 14px;
+    font-size: 16px;
     color: $white;
     line-height: 1.7em;
   }

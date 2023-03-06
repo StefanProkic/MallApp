@@ -15,9 +15,23 @@ footer {
   gap: 50px;
   justify-content: center;
   padding: 20px 0;
+
+  img {
+    width: 50px;
+  }
+  a {
+    text-align: center;
+  }
 }
-footer img {
-  width: 50px;
+
+/* mobile responsive */
+@media (max-width: $mobile) {
+  footer {
+    gap: 4%;
+    img {
+      width: 72%;
+    }
+  }
 }
 </style>
 <script setup>
