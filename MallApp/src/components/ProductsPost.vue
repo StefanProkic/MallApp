@@ -40,13 +40,15 @@
   width: 100%;
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 320px);
-    grid-template-rows: 367px;
+    display: flex;
+    /* grid-template-columns: repeat(3, 320px);
+    grid-template-rows: 367px; */
     gap: 90px;
     padding-top: 40px;
   }
   &__box {
+    width: 320px;
+    height: 367px;
     background: $purpleGradient;
     border-radius: 4px;
     padding: 20px;
@@ -55,6 +57,7 @@
       text-decoration: none;
     }
   }
+
   &__box h4,
   h2 {
     margin-bottom: 12px;
@@ -69,6 +72,10 @@
 
     img {
       width: 100%;
+      transition: transform 0.5s;
+    }
+    img:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -81,10 +88,12 @@
     padding: 0 2%;
 
     &__wrapper {
-      grid-template-rows: repeat(3, 367px);
+      /* grid-template-rows: repeat(3, 367px);
       grid-template-columns: 320px;
-      justify-content: center;
-      gap: 3%;
+      justify-content: center; */
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
     }
   }
 }

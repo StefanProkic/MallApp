@@ -37,14 +37,16 @@
   width: 100%;
 
   &__wrapper {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(3, 365px);
-    grid-template-rows: 261px;
+    /* grid-template-columns: repeat(3, 365px);
+    grid-template-rows: 261px; */
     gap: 22px;
     padding-top: 40px;
   }
   &__box {
+    width: 365px;
+    height: 261px;
     background: $white;
     /* width: 365px;
     height: 261px; */
@@ -66,6 +68,45 @@
     height: 50px;
     margin-bottom: 15px;
   }
+  img:hover {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
 }
 h2 {
   color: $black;
@@ -75,5 +116,26 @@ h2 {
 a {
   text-decoration: none;
   color: $black;
+}
+
+/* mobile responsive */
+@media (max-width: $mobile) {
+  .contactInfo {
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+    p {
+      font-size: 18px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      padding-top: 0;
+    }
+    &__box {
+      width: 82%;
+      height: auto;
+    }
+  }
 }
 </style>

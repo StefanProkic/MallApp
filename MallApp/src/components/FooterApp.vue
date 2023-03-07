@@ -18,6 +18,11 @@ footer {
 
   img {
     width: 50px;
+
+    transition: all 0.3s;
+  }
+  img:hover {
+    transform: scale(1.07);
   }
   a {
     text-align: center;
