@@ -5,20 +5,35 @@
     </div>
     <div class="hero__maps">
       <img
+        id="floorMap"
         src="../assets/images/first_floor_app.webp"
         alt="image of first floor"
       />
     </div>
     <div class="hero__selectFloors">
-      <button><p>Basement</p></button>
-      <button class="hero__activeMaps"><p>Ground floor</p></button>
-      <button><p>First floor</p></button>
+      <button @click="changeFloor('/src/assets/images/basement_app.webp')">
+        <p>Basement</p>
+      </button>
+      <button
+        class="hero__activeMaps"
+        @click="changeFloor('/src/assets/images/ground_floor_app.webp')"
+      >
+        <p>Ground floor</p>
+      </button>
+      <button @click="changeFloor('/src/assets/images/first_floor_app.webp')">
+        <p>First floor</p>
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
 import FilterMap from "./FilterMap.vue";
+
+function changeFloor(imgUrl) {
+  let img = document.querySelector("#floorMap");
+  img.setAttribute("src", imgUrl);
+}
 </script>
 
 <style lang="scss">
