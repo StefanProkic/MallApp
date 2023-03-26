@@ -11,17 +11,24 @@
       />
     </div>
     <div class="hero__selectFloors">
-      <button @click="changeFloor('/src/assets/images/basement_app.webp')">
-        <p>Basement</p>
+      <button
+        @click="(e) => changeFloor('/src/assets/images/basement_app.webp', e)"
+      >
+        Basement
       </button>
       <button
-        class="hero__activeMaps"
-        @click="changeFloor('/src/assets/images/ground_floor_app.webp')"
+        @click="
+          (e) => changeFloor('/src/assets/images/ground_floor_app.webp', e)
+        "
       >
-        <p>Ground floor</p>
+        Ground floor
       </button>
-      <button @click="changeFloor('/src/assets/images/first_floor_app.webp')">
-        <p>First floor</p>
+      <button
+        @click="
+          (e) => changeFloor('/src/assets/images/first_floor_app.webp', e)
+        "
+      >
+        First floor
       </button>
     </div>
   </div>
@@ -30,7 +37,10 @@
 <script setup>
 import FilterMap from "./FilterMap.vue";
 
-function changeFloor(imgUrl) {
+function changeFloor(imgUrl, e) {
+  let buttons = document.querySelectorAll(".hero__selectFloors > button");
+  buttons.forEach((button) => button.classList.remove("hero__activeMaps"));
+  e.target.classList.add("hero__activeMaps");
   let img = document.querySelector("#floorMap");
   img.setAttribute("src", imgUrl);
 }
@@ -84,13 +94,15 @@ function changeFloor(imgUrl) {
     background-color: transparent;
     border: none;
     transition: transform 0.2s;
+    cursor: pointer;
+    color: white;
   }
-  &__activeMaps p {
-    font-size: 15px;
-    color: $white;
-    background-color: $purple;
-    border-radius: 4px;
-    padding: 8px 10px;
+  &__activeMaps {
+    font-size: 15px !important;
+    color: $white !important;
+    background-color: $purple !important;
+    border-radius: 4px !important;
+    padding: 8px 10px !important;
   }
 }
 /* mobile responsive */

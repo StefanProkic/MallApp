@@ -1,18 +1,8 @@
 <template>
   <div class="singleStore">
     <div class="singleStore__txt">
-      <h1>Nike</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-        voluptate repellat odit aliquam nisi veniam consectetur, doloremque
-        molestias ducimus ab perferendis vitae similique, incidunt ratione
-        dignissimos.<br /><br />
-        veritatis ullam expedita, quisquam tempore totam? Libero id labore eos
-        optio veniam officiis recusandae architecto ex hic, possimus nam error
-        saepe eaque minus quis dolorem voluptate perferendis deserunt facere.
-        Dicta ad quod sapiente nesciunt accusamus, eos inventore animi soluta,
-        iste magnam nostrum, dolor ex!
-      </p>
+      <h1 v-for="title in store" :key="title.id">{{ title.title }}</h1>
+      <p v-for="txt in store" :key="txt.id">{{ txt.info }}</p>
       <div class="singleStore__legend">
         <img src="@/assets/images/building.webp" alt="building" />
         <h2>first floor</h2>
@@ -42,6 +32,16 @@
     </div>
   </div>
 </template>
+
+<script>
+import storesData from "../stores.json";
+
+export default {
+  data() {
+    return { store: storesData };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .singleStore {
